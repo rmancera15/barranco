@@ -16,7 +16,7 @@ export default class Navbar extends Component {
   navbarHandler = () => {
     this.state.navbarOpen
       ? this.setState({ navbarOpen: false, css: "collapse navbar-collapse" })
-      : this.setState({ navbar: true, css: "collapse navbar-collapse show" })
+      : this.setState({ navbarOpen: true, css: "collapse navbar-collapse show" })
   }
 
   render() {
@@ -33,7 +33,7 @@ export default class Navbar extends Component {
           <span className="navbar-toggler-icon" />
         </button>
         <div className={this.state.css}>
-          <ul className="navbar-nav mxx-auto">
+          <ul className="navbar-nav mx-auto">
             {this.state.links.map(link => {
               return (
                 <li key={link.id} className="nav-item">
