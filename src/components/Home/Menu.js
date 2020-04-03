@@ -15,7 +15,6 @@ const getCategories = items => {
 export default class Menu extends Component {
   constructor(props) {
     super(props)
-    console.log(props.items)
     this.state = {
       items: props.items.edges,
       menuItems: props.items.edges,
@@ -38,7 +37,6 @@ export default class Menu extends Component {
   }
 
   render() {
-    console.log(this.state.categories)
     if (this.state.items.length > 0) {
       return (
         <section className="menu py-5">
