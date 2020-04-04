@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => (
       styleClass="default-background"
     />
     <Info />
- 
+    <Menu items={data.menu} />
   </Layout>
 )
 
@@ -29,7 +29,24 @@ export const query = graphql`
         }
       }
     }
-
+    menu: allContentfulMenuItem {
+      edges {
+        node {
+          id
+          title
+          description {
+            description
+          }
+          price
+          category
+          image {
+            fixed(height: 50, width: 50) {
+              ...GatsbyContentfulFixed
+            }
+          }
+        }
+      }
+    }
   }
 `
 
