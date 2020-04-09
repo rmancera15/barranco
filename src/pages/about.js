@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import socialFollow from "../components/global/socialFollow";
+
 
 
 import Layout from "../components/layout"
