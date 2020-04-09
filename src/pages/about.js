@@ -1,5 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
+import socialFollow from "../components/global/socialFollow";
+
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -11,19 +13,20 @@ const AboutPage = ({ data }) => (
     <SEO title="Home" keywords={[`gatsby`]} />
     <Background
       img={data.img.childImageSharp.fluid}
-      title="About us"
+      title=""
       styleClass="about-background"
     />
     <Info />
+    <socialFollow/>
   </Layout>
 )
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "about-background.jpeg" }) {
+    img: file(relativePath: { eq: "barrPatio.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid
         }
       }
     }

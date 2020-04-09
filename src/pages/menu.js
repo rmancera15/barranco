@@ -1,35 +1,20 @@
-import React from "react"
+import React from 'react';
+
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Background from "../components/global/Background"
-import Info from "../components/Home/Info"
 import Menu from "../components/Home/Menu"
-import Image from "../images/fondo.jpeg"
 
-const IndexPage = ({ data }) => (
+const menuPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`]} />
-    <Background
-      img={data.img.childImageSharp.fluid}
-      title=""
-      styleClass="default-background"
-    />
       <Menu items={data.menu} />
-    <Info />
   </Layout>
 )
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "fondo.jpeg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     menu: allContentfulMenuItem {
       edges {
         node {
@@ -51,4 +36,4 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
+export default menuPage;

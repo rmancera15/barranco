@@ -12,6 +12,11 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 
+.navbar {
+  background-color: #a832a2 !important;
+}
+
+
 h1,
 h2,
 h3,
@@ -23,7 +28,7 @@ h6 {
 }
 
 .text-yellow {
-  color: var(--mainYellow);
+  color:  #f7e594 ;
 }
 
 .default-background,
@@ -42,18 +47,32 @@ h6 {
 
 .btn-yellow {
   color: var(--mainYellow);
-  border-color: var(--mainYellow);
+  border-color:  #a832a2 ;
+}
+
+.text-purp{
+  color: #a832a2 ;
+  font-weight:bold;
 }
 
 .btn-yellow {
-  background: var(--mainYellow);
-  color: var(--mainBrown);
+  background: #f7e594 ;
+  color: #a832a2 ;
 }
 
 .footer {
-  background: var(--mainBrown);
+  background: #a832a2 !important;
 }
 
 .menu{
-  background: var(--mainGrey);
+  background: #f7e594 ;
+}
+
+.social{
+  color: white;
+  margin: 10px;
+}
+
+.socialDiv{
+  padding-right: 20px;
 }
